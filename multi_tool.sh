@@ -68,7 +68,7 @@ update() {
 		sudo cp $HOME/massa/massa-node/config/node_privkey.key $HOME/massa_backup/node_privkey.key
 	fi
 	local massa_version=`wget -qO- https://api.github.com/repos/massalabs/massa/releases/latest | jq -r ".tag_name"`
-	wget -qO $HOME/massa.tar.gz "https://github.com/massalabs/massa/releases/download/${massa_version}/massa_${massa_version}_release_linux.tar.gz"
+	wget -qO $HOME/massa.tar.gz "https://github.com/massalabs/massa/releases/download/TEST.9.2/massa_TEST.9.2_release_linux.tar.gz"
 	if [ `wc -c < "$HOME/massa.tar.gz"` -ge 1000 ]; then
 		rm -rf $HOME/massa/
 		tar -xvf $HOME/massa.tar.gz
